@@ -1,6 +1,7 @@
+board\Board.class
+board\MovingObjects.class
+objects\Food.class
 board\MapGenerator.class
 board\Menu.class
 objects\Cell.class
-board\Board.class
 main\Main.class
-board\MovingObjects.class
