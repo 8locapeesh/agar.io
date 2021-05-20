@@ -1,88 +1,31 @@
 package objects;
 
-import board.Gameobject;
+
 import board.MapGenerator;
 
 import java.awt.*;
+import java.util.Random;
 
-public class Cell {
-    private double radius;
-    private double x;
-    private double y;
-    private double mass;
-    private double deltaX;
-    private double deltaY;
-    protected Color color;
-    protected double speed;
+public class Cell  {
+    private int radius;
+    public Point point;
+    private Random rnd = new Random();
 
 
-    public Cell(int radius, Color color, int x, int y, int deltaX, int deltaY, double mass, Color color, double speed) {
+
+    public Cell(int radius){
         this.radius = radius;
-        this.color = color;
-        this.x = x;
-        this.y = y;
-        this.deltaX = deltaX;
-        this.deltaY = deltaY;
-        this.mass = mass;
-        this.speed = speed;
-
+        point = randomLocation();
     }
 
-    public double getX() {
-        return x;
-    }
-
-    public double getY() {
-        return y;
-    }
-
-    public double getDeltaX() {
-        return deltaX;
-    }
-
-    public double getDeltaY() {
-        return deltaY;
-    }
-
-    public double getRadius() {
-        return radius;
-    }
-
-    public double getMass() { return mass; }
-
-    public Color getColor() { return color; }
-
-    public double getSpeed() { return speed; }
-
-    public void setX(double x) {
-        this.x = x;
-    }
-
-    public void setY(double y) {
-        this.y = y;
-    }
-
-    public void setDeltaX(double deltaX) {
-        this.deltaX = deltaX;
-    }
-
-    public void setDeltaY(double deltaY) {
-        this.deltaY = deltaY;
-    }
-
-    public void setMass(double mass) {
-        this.mass = mass;
-    }
-
-    public void setRadius(double radius) {
+   public Point randomLocation(){
+       Point point = new Point();
+       point.x = rnd.nextInt(40);
+       point.y = rnd.nextInt(40);
+       return point;
+   }
+    public int getRadius() {
         this.radius = radius;
-    }
+        return radius; }
 
-    public void setColor(Color color) {
-        this.color = color;
-    }
-
-    public void setSpeed(double speed) {
-        this.speed = speed;
-    }
 }

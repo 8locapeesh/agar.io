@@ -1,33 +1,21 @@
 package board;
 
 
+import objects.Cell;
+
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
-public class Board  {
-    public static void main(String[] args) {
-
-        JFrame b = new JFrame("agar.io");
-        MapGenerator map = new MapGenerator();
-        b.setVisible(true);
-        b.getContentPane().setBackground(new Color(102, 102, 102));
-        b.setSize(700, 600);
-        b.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
-        ;
+public class Board extends JFrame {
 
 
+   public Board(ArrayList<Cell> cells){
+        this.setTitle("agar.io");
+        this.add(new MapGenerator(cells));
+        this.setSize(615, 638);
+        setVisible(true);
+        this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
+    }}
 
-
-
-       /* BlobGame theGame = new BlobGame();
-        theGame.setSize(800, 800);
-        theGame.setLocation(0, 0);
-        b.getContentPane().add(theGame);
-
-
-
-        b.addKeyListener(theGame);
-        theGame.run();*/
-    }
-    }
 

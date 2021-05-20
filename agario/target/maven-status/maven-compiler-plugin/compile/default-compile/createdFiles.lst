@@ -1,3 +1,6 @@
 board\MapGenerator.class
-main\Main.class
+board\Menu.class
+objects\Cell.class
 board\Board.class
+main\Main.class
+board\MovingObjects.class
